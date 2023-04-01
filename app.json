@@ -22,11 +22,11 @@
             "description": "Your bot token.",
             "required": true
         },
-        "ID": {
+        "APP_ID": {
             "description": "Get this value from https://my.telegram.org",
             "required": true
         },
-        "HASH": {
+        "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
             "required": true
         },
