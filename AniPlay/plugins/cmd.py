@@ -64,3 +64,12 @@ async def stats2(_, message: Message):
         await message.reply_photo(img, caption='**AnimeDex | Overall Stats**')
     except:
         return
+@app.on_message(filters.command(['help']))
+async def start(_, message: Message):
+    try:
+        await message.reply_video('https://te.legra.ph/file/95e080e5e47b5621fbf4c.mp4',caption="""I am in Beta Stage 
+        
+        I have Only English 🇦🇺and Japaneese 🇯🇵 Langugae and English Subtitle
+        
+        My Channel >> <a href='https://t.me/movie_time_botonly'>TRUMBOTS</a>
+/search <animename>""")
