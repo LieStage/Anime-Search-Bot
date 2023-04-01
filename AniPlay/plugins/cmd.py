@@ -9,7 +9,13 @@ from AniPlay.plugins.stats import day, over
 @app.on_message(filters.command(['start', 'ping', 'help', 'alive']))
 async def start(_, message: Message):
     try:
-        await message.reply_text('Bot Is Online...\nSearch Animes Using /search or /s\n\n Join - @GreyMatter_Bots for More...')
+        await message.reply_video('https://te.legra.ph/file/95e080e5e47b5621fbf4c.mp4',caption="""𝗛𝗶 🦾
+
+𝗜 𝗮𝗺 𝗦𝗶𝗺𝗽𝗹𝗲 𝗔𝗻𝗶𝗺𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗕𝗼𝘁 👁
+
+𝗛𝗼𝘄 𝗧𝗼 𝗨𝘀𝗲 𝗠𝗲?
+
+/search <animename>""")
     except:
         return
 
@@ -23,7 +29,7 @@ async def searchCMD(_, message: Message):
         user = message.from_user.id
         query = ' '.join(message.command[1:])
         if query == '':
-            return await message.reply_text('Give me something to search ^_^')
+            return await message.reply_text('Try Like This /search <animename> ^_^')
         data = AnimeDex.search(query)
         button = BTN.searchCMD(user, data, query)
         await message.reply_text(QUERY.format(query), reply_markup=button)
